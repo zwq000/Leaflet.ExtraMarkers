@@ -23,7 +23,7 @@
   height: 16px;
 }
 /* Retina displays */
-@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .extra-marker {
     background-image: url("../img/markers_default@2x.png");
     background-size: 540px 184px;

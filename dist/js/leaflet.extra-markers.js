@@ -8,13 +8,15 @@
  */
 
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.leaflet = global.leaflet || {}, global.leaflet['extra-markers'] = {})));
-}(this, (function (exports) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('leaflet')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'leaflet'], factory) :
+    (factory((global.leaflet = global.leaflet || {}, global.leaflet['extra-markers'] = {}),global.L));
+}(this, (function (exports,L) { 'use strict';
+
+    L = L && L.hasOwnProperty('default') ? L['default'] : L;
 
     var ExtraMarkers = L.ExtraMarkers = {};
-    ExtraMarkers.version = L.ExtraMarkers.version = "1.2.1";
+    ExtraMarkers.version = L.ExtraMarkers.version = "1.2.2";
     ExtraMarkers.Icon = L.ExtraMarkers.Icon = L.Icon.extend({
         options: {
             iconSize: [ 35, 45 ],
